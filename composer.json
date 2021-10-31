@@ -1,0 +1,37 @@
+{
+    "name": "brunofalcaodev/mastering-nova",
+    "description": "Mastering Nova course",
+    "keywords": [
+        "brunofalcaodev",
+        "eduka",
+        "laravel"
+    ],
+    "homepage": "https://github.com/brunofalcaodev/mastering-nova",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.0",
+        "brunocfalcao/flame": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "MasteringNova\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MasteringNova\\MasteringNovaServiceProvider"
+            ]
+        }
+    }
+}
