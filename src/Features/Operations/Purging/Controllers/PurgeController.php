@@ -1,12 +1,12 @@
 <?php
 
-namespace Brunocfalcao\MasteringNova\Features\Operations\Purging\Controllers;
+namespace MasteringNova\Features\Operations\Purging\Controllers;
 
-use Brunocfalcao\MasteringNova\Http\Controllers\Controller;
-use Brunocfalcao\MasteringNova\Models\Giveaway;
-use Brunocfalcao\MasteringNova\Models\PaddleLog;
-use Brunocfalcao\MasteringNova\Models\Subscriber;
-use Brunocfalcao\MasteringNova\Models\User;
+use MasteringNova\Http\Controllers\Controller;
+use MasteringNova\Models\Giveaway;
+use MasteringNova\Models\PaddleLog;
+use MasteringNova\Models\Subscriber;
+use MasteringNova\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Activitylog\Models\Activity;
 
@@ -21,7 +21,7 @@ class PurgeController extends Controller
      * Purges a user from the database and from all its related tables data.
      *
      * @param  Request $request
-     * @param  \Brunocfalcao\MasteringNova\User    $user
+     * @param  \MasteringNova\User    $user
      *
      * @return Response
      */

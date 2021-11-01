@@ -1,10 +1,10 @@
 <?php
 
-namespace Brunocfalcao\MasteringNova\Features\GiveAway\Newsletter\Controllers;
+namespace MasteringNova\Features\GiveAway\Newsletter\Controllers;
 
-use Brunocfalcao\MasteringNova\Http\Controllers\Controller;
-use Brunocfalcao\MasteringNova\Models\Giveaway;
-use Brunocfalcao\MasteringNova\Models\Subscriber;
+use MasteringNova\Http\Controllers\Controller;
+use MasteringNova\Models\Giveaway;
+use MasteringNova\Models\Subscriber;
 use Illuminate\Http\Request;
 use Spatie\Honeypot\ProtectAgainstSpam;
 

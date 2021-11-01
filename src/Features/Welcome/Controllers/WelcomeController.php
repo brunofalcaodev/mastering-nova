@@ -1,13 +1,13 @@
 <?php
 
-namespace Brunocfalcao\MasteringNova\Features\Welcome\Controllers;
+namespace MasteringNova\Features\Welcome\Controllers;
 
-use Brunocfalcao\MasteringNova\Http\Controllers\Controller;
-use Brunocfalcao\MasteringNova\Mail\ThankYouForSubscribing;
-use Brunocfalcao\MasteringNova\Models\Chapter;
-use Brunocfalcao\MasteringNova\Models\Subscriber;
-use Brunocfalcao\MasteringNova\Models\Video;
-use Brunocfalcao\MasteringNova\Models\Website;
+use MasteringNova\Http\Controllers\Controller;
+use MasteringNova\Mail\ThankYouForSubscribing;
+use MasteringNova\Models\Chapter;
+use MasteringNova\Models\Subscriber;
+use MasteringNova\Models\Video;
+use MasteringNova\Models\Website;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;

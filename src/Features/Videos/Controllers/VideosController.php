@@ -1,10 +1,10 @@
 <?php
 
-namespace Brunocfalcao\MasteringNova\Features\Videos\Controllers;
+namespace MasteringNova\Features\Videos\Controllers;
 
-use Brunocfalcao\MasteringNova\Http\Controllers\Controller;
-use Brunocfalcao\MasteringNova\Models\Chapter;
-use Brunocfalcao\MasteringNova\Models\Video;
+use MasteringNova\Http\Controllers\Controller;
+use MasteringNova\Models\Chapter;
+use MasteringNova\Models\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;

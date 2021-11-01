@@ -1,8 +1,8 @@
 <?php
 
-namespace Brunocfalcao\MasteringNova\Features\Purchased\Controllers;
+namespace MasteringNova\Features\Purchased\Controllers;
 
-use Brunocfalcao\MasteringNova\Http\Controllers\Controller;
+use MasteringNova\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
