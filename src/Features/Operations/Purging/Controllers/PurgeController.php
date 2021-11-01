@@ -2,12 +2,12 @@
 
 namespace MasteringNova\Features\Operations\Purging\Controllers;
 
-use MasteringNova\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use MasteringNova\Models\Giveaway;
 use MasteringNova\Models\PaddleLog;
 use MasteringNova\Models\Subscriber;
 use MasteringNova\Models\User;
-use Illuminate\Http\Request;
 use Spatie\Activitylog\Models\Activity;
 
 class PurgeController extends Controller

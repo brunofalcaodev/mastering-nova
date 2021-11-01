@@ -29,9 +29,61 @@ class Install extends Command
 
         $this->paragraph('-= Mastering Nova installation starting =-', false);
 
+        $this->publishResources();
+
         $this->migrate();
 
         return Command::SUCCESS;
+    }
+
+    protected function preChecks()
+    {
+        $this->paragraph('Running pre-checks...', false);
+
+        /**
+         * Quick ENV key/values validation.
+         * key name => type
+         * type can be:
+         *   null (should exist, any value allowed)
+         *   a value (equal to that value).
+         */
+        $envVars = collect([
+            'QUEUE_CONNECTION' => 'redis',
+            'CACHE_DRIVER' => 'redis',
+            'MAIL_MAILER' => 'postmark',
+        ]);
+
+        $envVars->each(function ($value, $key) {
+            if (is_null(env($key))) {
+                $this->error('.env '.$key.' cannot be null / must exist');
+                exit();
+            } elseif (env($key) != $value && ! is_null($value)) {
+                $this->error('.env '.$key.' should be equal to '.$value);
+                exit();
+            }
+        });
+
+        if (is_file(app_path('app/Providers/NovaServiceProvider.php'))) {
+            return $this->error('Please install Laravel Nova before running Eduka');
+        }
+
+        $providers = collect(config('app.providers'));
+
+        if (! $providers->contains('App\Providers\NovaServiceProvider')) {
+            return $this->error('Laravel Nova Service provider is not loaded into the app.php config file');
+        }
+
+        return true;
+    }
+
+    protected function publishResources()
+    {
+        $this->paragraph('=> Publishing course resources...', false);
+
+        $this->call('vendor:publish', [
+            '--provider' => 'MasteringNova\MasteringNovaServiceProvider',
+            '--force' => true,
+        ]);
     }
 
     protected function migrate()

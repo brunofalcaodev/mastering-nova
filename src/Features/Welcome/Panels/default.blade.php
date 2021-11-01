@@ -29,7 +29,7 @@
                     </div>
                 </div>
 
-                @if(env('LAUNCHED') == 1)
+                @if(env('EDUKA_LAUNCHED') == 1)
                 <div class="flex items-start mt-8 justify-center sm:justify-start md:justify-center lg:justify-start">
                     <div class="hidden sm:block md:hidden lg:block w-16 xl:mr-6">&nbsp;</div>
                     <div class="flex flex-wrap sm:flex-no-wrap justify-center items-center">
@@ -305,7 +305,7 @@
 
     <!-- Pricing -->
     @guest
-    @if(env('LAUNCHED') == 1)
+    @if(env('EDUKA_LAUNCHED') == 1)
     <section id="pricing" class="hero-pattern-topography py-16">
         <div class="flex justify-center">
             <div class="w-11/12 md:w-2/3 hd:w-1/2">
@@ -402,7 +402,7 @@
                     </div>
                     <div class="w-full md:w-1/2 pt-8 md:pt-0">
                         <h1 class="font-bold text-xl text-red-600">Do you use purchase power parity?</h1>
-                        @if(env('LAUNCHED') == 1)
+                        @if(env('EDUKA_LAUNCHED') == 1)
                         <p class="text-lg text-indigo-900 pt-2">In case you want a discount based on your country, <a class="link-dark" href="{{ route('welcome.ppp') }}">click here.</a></p>
                         @else
                         <p class="text-lg text-indigo-900 pt-2">Indeed! When I launch the course you will be able to apply for a discount based on your country!</a></p>

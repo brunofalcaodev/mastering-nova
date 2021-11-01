@@ -2,15 +2,15 @@
 
 namespace MasteringNova\Features\Welcome\Controllers;
 
-use MasteringNova\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 use MasteringNova\Mail\ThankYouForSubscribing;
 use MasteringNova\Models\Chapter;
 use MasteringNova\Models\Subscriber;
 use MasteringNova\Models\Video;
 use MasteringNova\Models\Website;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Validator;
 use ProtoneMedia\LaravelPaddle\Paddle;
 
 class WelcomeController extends Controller
