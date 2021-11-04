@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('course::layouts.default')
 
 @section('body')
 
@@ -180,16 +180,16 @@
 @endsection
 
 @push('head')
-<link href="{{ mix('css/perfect-scrollbar.css') }}" rel="stylesheet">
+<link href="{{ mix('/vendor/mastering-novacss/perfect-scrollbar.css') }}" rel="stylesheet">
 @endpush
 
 @push('scripts')
 
 <!-- https://github.com/rosszurowski/fitvids -->
-<script src="{{ mix('/js/fitvids.js') }}"></script>
+<script src="{{ mix('/vendor/mastering-nova/js/fitvids.js') }}"></script>
 
 <!-- https://github.com/mdbootstrap/perfect-scrollbar -->
-<script src="{{ mix('/js/perfect-scrollbar.js') }}"></script>
+<script src="{{ mix('/vendor/mastering-nova/js/perfect-scrollbar.js') }}"></script>
 
 <script type="text/javascript">
 

@@ -3,11 +3,11 @@
 namespace MasteringNova\Features\Operations\Purging\Controllers;
 
 use App\Http\Controllers\Controller;
+use Eduka\Models\Giveaway;
+use Eduka\Models\PaddleLog;
+use Eduka\Models\Subscriber;
+use Eduka\Models\User;
 use Illuminate\Http\Request;
-use MasteringNova\Models\Giveaway;
-use MasteringNova\Models\PaddleLog;
-use MasteringNova\Models\Subscriber;
-use MasteringNova\Models\User;
 use Spatie\Activitylog\Models\Activity;
 
 class PurgeController extends Controller

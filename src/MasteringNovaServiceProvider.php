@@ -10,6 +10,7 @@ class MasteringNovaServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        $this->registerViews();
         $this->registerCommands();
         $this->publishResources();
         $this->loadRoutes();
@@ -18,6 +19,11 @@ class MasteringNovaServiceProvider extends ServiceProvider
     public function register()
     {
         //
+    }
+
+    protected function registerViews()
+    {
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'course');
     }
 
     protected function registerCommands(): void
@@ -30,7 +36,7 @@ class MasteringNovaServiceProvider extends ServiceProvider
     protected function publishResources()
     {
         $this->publishes([
-            __DIR__.'/../resources/overrides/' => base_path('/'),
+            __DIR__.'/../overrides/' => base_path('/'),
         ], 'mastering-nova-overrides');
     }
 

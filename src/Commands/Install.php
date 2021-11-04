@@ -5,6 +5,7 @@ namespace MasteringNova\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 use MasteringNova\Seeders\InitialCourseSeeder;
+use Symfony\Component\Process\Process;
 
 class Install extends Command
 {
@@ -36,54 +37,11 @@ class Install extends Command
         return Command::SUCCESS;
     }
 
-    protected function preChecks()
-    {
-        $this->paragraph('Running pre-checks...', false);
-
-        /**
-         * Quick ENV key/values validation.
-         * key name => type
-         * type can be:
-         *   null (should exist, any value allowed)
-         *   a value (equal to that value).
-         */
-        $envVars = collect([
-            'QUEUE_CONNECTION' => 'redis',
-            'CACHE_DRIVER' => 'redis',
-            'MAIL_MAILER' => 'postmark',
-        ]);
-
-        $envVars->each(function ($value, $key) {
-            if (is_null(env($key))) {
-                $this->error('.env '.$key.' cannot be null / must exist');
-                exit();
-            } elseif (env($key) != $value && ! is_null($value)) {
-                $this->error('.env '.$key.' should be equal to '.$value);
-                exit();
-            }
-        });
-
-        if (is_file(app_path('app/Providers/NovaServiceProvider.php'))) {
-            return $this->error('Please install Laravel Nova before running Eduka');
-        }
-
-        $providers = collect(config('app.providers'));
-
-        if (! $providers->contains('App\Providers\NovaServiceProvider')) {
-            return $this->error('Laravel Nova Service provider is not loaded into the app.php config file');
-        }
-
-        return true;
-    }
-
     protected function publishResources()
     {
         $this->paragraph('=> Publishing course resources...', false);
 
-        $this->call('vendor:publish', [
-            '--provider' => 'MasteringNova\MasteringNovaServiceProvider',
-            '--force' => true,
-        ]);
+        $this->executeCommand('php artisan vendor:publish --provider=MasteringNova\MasteringNovaServiceProvider --force');
     }
 
     protected function migrate()
@@ -106,5 +64,29 @@ class Install extends Command
         if ($endlf) {
             $this->info('');
         }
+    }
+
+    /**
+     * Run the given command as a process.
+     *
+     * @param  string  $command
+     * @param  string  $path
+     * @return void
+     */
+    private function executeCommand($command, $path = null)
+    {
+        if ($path == null) {
+            $path = getcwd();
+        }
+
+        $process = (Process::fromShellCommandline($command, $path))->setTimeout(null);
+
+        if ('\\' !== DIRECTORY_SEPARATOR && file_exists('/dev/tty') && is_readable('/dev/tty')) {
+            $process->setTty(true);
+        }
+
+        $process->run(function ($type, $line) {
+            $this->output->write($line);
+        });
     }
 }

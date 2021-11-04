@@ -1,4 +1,4 @@
-@extends('layouts.default', ['navbar' => false, 'footer' => false])
+@extends('course::layouts.default', ['navbar' => false, 'footer' => false])
 
 @section('body')
 

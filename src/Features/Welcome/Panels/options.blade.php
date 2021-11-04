@@ -1,4 +1,4 @@
-@extends('layouts.default', ['navbar' => true, 'footer' => false])
+@extends('course::layouts.default', ['navbar' => true, 'footer' => false])
 
 @section('body')
 
@@ -40,7 +40,7 @@
                     <button class="h-20 w-full p-5 text-base sm:text-2xl font-bold bg-indigo-100 text-indigo-900 rounded rounded-lg flex items-center justify-center sm:justify-start sm:mr-4 hover:bg-white hover:text-red-500">
                         <x-feathericon-thumbs-up class="block hidden hd:block s-8 mr-4" />
                         <div class="text-left text-base md:text-2xl lg:text-xl lg:font-bold">
-                            Pay half now&nbsp;<span class="line-through text-gray-500">$ {{ WebsiteCheckout::make()->price()->amount->default }}</span> $ {{ WebsiteCheckout::make()->price()->amount->half }}
+                            Pay half now&nbsp;<span class="line-through text-gray-500">$ {{ CourseCheckout::make()->price()->amount->default }}</span> $ {{ CourseCheckout::make()->price()->amount->half }}
                         </div>
                     </button>
                 </a>

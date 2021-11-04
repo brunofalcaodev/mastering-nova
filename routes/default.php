@@ -1,7 +1,7 @@
 <?php
 
+use Eduka\Models\User;
 use Illuminate\Support\Facades\Route;
-use MasteringNova\Models\User;
 
 /*
 |--------------------------------------------------------------------------

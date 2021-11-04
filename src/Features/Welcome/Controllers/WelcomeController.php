@@ -3,14 +3,14 @@
 namespace MasteringNova\Features\Welcome\Controllers;
 
 use App\Http\Controllers\Controller;
+use Eduka\Models\Chapter;
+use Eduka\Models\Course;
+use Eduka\Models\Subscriber;
+use Eduka\Models\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use MasteringNova\Mail\ThankYouForSubscribing;
-use MasteringNova\Models\Chapter;
-use MasteringNova\Models\Subscriber;
-use MasteringNova\Models\Video;
-use MasteringNova\Models\Website;
 use ProtoneMedia\LaravelPaddle\Paddle;
 
 class WelcomeController extends Controller
@@ -47,7 +47,7 @@ class WelcomeController extends Controller
         return flame([
             'videos' => Video::query(),
             'totalVideos' => Video::all()->count(),
-            'website' => Website::first(),
+            'website' => Course::first(),
             'chapters' => Chapter::orderBy('index')->get(),
         ]);
     }
@@ -67,7 +67,7 @@ class WelcomeController extends Controller
             ->send(new ThankYouForSubscribing());
 
         return flame([
-            'website' => Website::first(),
+            'website' => Course::first(),
             'chapters' => Chapter::orderBy('index')->get(),
         ]);
     }
