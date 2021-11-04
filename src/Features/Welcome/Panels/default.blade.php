@@ -1,6 +1,6 @@
 <x-eduka::site>
     <x-eduka::head>
-        <link rel="stylesheet" type="text/css" href="/vendor/nova-advanced-ui/css/app.css">
+        <link rel="stylesheet" type="text/css" href="/vendor/mastering-nova/css/app.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
             <!-- Logo header -->
             <section class="pt-12 bg-background-900">
                 <div class="w-full bg-background-900">
-                    <img class="h-12 mx-auto" src="/vendor/nova-advanced-ui/images/logo.png" alt="{{ course()->name }}">
+                    <img class="h-12 mx-auto" src="/vendor/mastering-nova/images/logo.png" alt="{{ course()->name }}">
                 </div>
             </section>
             <!-- /Logo header -->
@@ -93,7 +93,7 @@
                     <!-- /Left hero container -->
                     <!-- Right hero container -->
                     <div class="w-full md:w-1/2 order-first md:order-last">
-                        <img src="/vendor/nova-advanced-ui/images/hero.jpg" class="rounded-lg" />
+                        <img src="/vendor/mastering-nova/images/hero.jpg" class="rounded-lg" />
                     </div>
                     <!-- /Right hero container -->
                 </div>
@@ -104,7 +104,7 @@
             <!-- Testimonial section -->
             <section class="px-12 xl:px-32 py-12 bg-primary-300 text-gray-600">
                 <div class="flex gap-8 flex-wrap sm:flex-nowrap">
-                    <img src="/vendor/nova-advanced-ui/images/me.jpg" class="rounded-full w-40 h-40" />
+                    <img src="/vendor/mastering-nova/images/me.jpg" class="rounded-full w-40 h-40" />
                     <div class="sm:border-l-4 border-primary-200 sm:pl-8">
                         <p class="text-lg lg:text-xl font-bold italic text-gray-800">After creating the first-ever premium Laravel Nova course, Mastering Nova, I'm back to record a new community-requested course about how to create and extend the Laravel Nova UI framework, so you will never be stuck to create different Vue components that will match your needs inside Nova!</p>
                         <p class="text-lg font-bold text-gray-700 pt-6"><a class="link" href="https://twitter.com/brunocfalcao" target="_blank">@htmlentities('Bruno Falcão')</a></p>
@@ -513,7 +513,7 @@
             <section class="px-12 xl:px-32 py-12 bg-background-900 text-gray-600">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                     <!-- Logo image -->
-                    <img class="h-8" src="/vendor/nova-advanced-ui/images/logo.png" alt="{{ course()->name }}">
+                    <img class="h-8" src="/vendor/mastering-nova/images/logo.png" alt="{{ course()->name }}">
                     <!-- /Logo image -->
 
                     <!-- Course url -->
@@ -531,6 +531,6 @@
             </section>
             <!-- /Footer -->
         </div>
-        <script type="text/javascript" src="/vendor/nova-advanced-ui/js/retina.min.js"></script>
+        <script type="text/javascript" src="/vendor/mastering-nova/js/retina.min.js"></script>
     </x-eduka::body>
 </x-eduka::site>

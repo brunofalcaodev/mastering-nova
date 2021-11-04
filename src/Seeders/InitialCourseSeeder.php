@@ -16,6 +16,7 @@ class InitialCourseSeeder extends Seeder
         // Create the course.
         Course::create([
             'name' => 'Mastering Nova',
+            'canonical' => 'mastering-nova'
         ]);
     }
 }
