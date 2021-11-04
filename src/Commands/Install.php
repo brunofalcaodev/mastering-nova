@@ -9,7 +9,7 @@ use Symfony\Component\Process\Process;
 
 class Install extends Command
 {
-    protected $signature = 'mastering-nova:install';
+    protected $signature = 'course:install';
 
     protected $description = 'Installs Mastering Nova course';
 
