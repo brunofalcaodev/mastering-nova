@@ -14,14 +14,33 @@ module.exports =
           topography: heropatterns.circuitboard,
         },
         "colors": {
-            "primary-950": "#24383F",
-            "primary-990": "#141e22",
-            'primary': {  DEFAULT: '#7BA6B4',  '50': '#FFFFFF',  '100': '#FDFEFE',  '200': '#DDE8EB',  '300': '#BCD2D9',  '400': '#9CBCC6',  '500': '#7BA6B4',  '600': '#5B90A1',  '700': '#497380',  '800': '#365660',  '900': '#24383F'},
-            'secondary': {  DEFAULT: '#E87F4D',  '50': '#FDF4F0',  '100': '#FBE7DE',  '200': '#F6CDB9',  '300': '#F1B395',  '400': '#ED9971',  '500': '#E87F4D',  '600': '#E25F20',  '700': '#B74B18',  '800': '#8A3912',  '900': '#5D260C'},
-            "background": colors.coolGray,
-            "gray": colors.coolGray,
-            "black": colors.black,
-            "white": "#FFFFFF"
+            "black": '#000000',
+            "white": '#FFFFFF',
+
+            "orange": {
+                DEFAULT: '#f57732',
+                '400': '#fe9c67',
+                '500': '#f57732',
+                '600': '#db7b46'
+            },
+
+            "blue": {
+                DEFAULT: '#4099DE',
+                '200': '#AAF1FF',
+                '300': '#4A90E2',
+                '400': '#2891C4',
+                '500': '#4099DE',
+                '600': '#4A90E2',
+                '800': '#26425F'
+            },
+            "gray": {
+                '100': '#EEf1f4',
+                '150': '#dbe6f0',
+                DEFAULT: '#56677B',
+                '500': '#56677B',
+                '600': '#4C5c69',
+                '700': '#26425F'
+            }
         },
         "extend": {
             "fontFamily": {

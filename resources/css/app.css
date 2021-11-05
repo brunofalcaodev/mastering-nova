@@ -21,7 +21,3 @@
   }
 
 }
-
-a {
-	@apply text-secondary-600 underline font-bold;
-}

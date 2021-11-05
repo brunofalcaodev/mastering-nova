@@ -9,38 +9,38 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <!-- /Favicon -->
     </x-eduka::head>
-    <x-eduka::body class="font-primary bg-repeat heropattern-topography-primary-950 antialised bg-background-900">
+    <x-eduka::body class="font-primary bg-repeat heropattern-topography-gray-150 antialised bg-gray-100">
         <x-eduka::responsive-breakpoints></x-eduka::responsive-breakpoints>
         <div class="px-4 sm:px-8 md:px-12 xl:container mx-auto">
             <!-- Logo header -->
-            <section class="pt-12 bg-background-900">
-                <div class="w-full bg-background-900">
+            <section class="pt-12 bg-blue-800">
+                <div class="w-full bg-blue-800">
                     <img class="h-12 mx-auto" src="/vendor/mastering-nova/images/logo.png" alt="{{ course()->name }}">
                 </div>
             </section>
             <!-- /Logo header -->
             <!-- Hero -->
             <!-- Responsive outer container -->
-            <section class="w-full bg-background-900 px-12 xl:px-32 py-12">
+            <section class="w-full bg-blue-800 px-12 xl:px-32 py-12">
                 <!-- Inner container -->
                 <div class="flex flex-wrap md:flex-nowrap gap-6 sm:gap-16">
                     <!-- Left hero container -->
                     <!-- Title and subtitle -->
                     <div class="w-full md:w-1/2">
-                        <p class="text-4xl md:text-3xl lg:text-4xl text-center sm:text-left sm:text-5xl font-bold text-primary-400 italic leading-tight pb-6">The <span class="text-secondary-600">aspirin</span> for your Nova UI coding <span class="text-secondary-600">headaches</span></p>
-                        <p class="text-2xl md:text-xl lg:text-2xl text-center sm:text-left font-bold text-primary-100 leading-snug">The course that will empower you to create killer, beautiful, and fully-functional UI components in Laravel Nova</p>
+                        <p class="text-4xl md:text-3xl lg:text-4xl text-center sm:text-left sm:text-5xl font-bold text-white italic leading-tight pb-6">The <span class="text-orange">aspirin</span> for your Nova UI coding <span class="text-orange">headaches</span></p>
+                        <p class="text-2xl md:text-xl lg:text-2xl text-center sm:text-left font-bold text-blue-200 leading-snug">The course that will empower you to create killer, beautiful, and fully-functional UI components in Laravel Nova</p>
                         <!-- /Title and subtitle -->
                         <!-- Features -->
                         <div class="py-12">
-                            <ul class="flex flex-col gap-6 text-secondary-100 text-xl">
+                            <ul class="flex flex-col gap-6 text-white text-xl">
                                 <li class="w-full sm:flex gap-6 items-start">
-                                    <svg class="mx-auto sm:mx-0 flex-shrink-0 h-16 w-16 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="mx-auto sm:mx-0 flex-shrink-0 h-16 w-16 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                                     </svg>
                                     <p class="text-xl md:text-base lg:text-xl pt-3 sm:pt-0 text-center sm:text-left">Deep-dive in all UI components, from Fields to Resource Tools, from Metrics to Cards. You will learn the nitty-gritty of the Nova UI framework!</p>
                                 </li>
                                 <li class="w-full sm:flex gap-6 items-start">
-                                    <svg class="mx-auto sm:mx-0 flex-shrink-0 h-16 w-16 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="mx-auto sm:mx-0 flex-shrink-0 h-16 w-16 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                                     </svg>
                                     <p class="text-xl md:text-base lg:text-xl pt-3 sm:pt-0 text-center sm:text-left">Create beautiful fully customized Nova Vue components, how to leverage the UI Components that come with Nova and much more!</p>
@@ -48,47 +48,38 @@
                             </ul>
                         </div>
                         <!-- /Features -->
-                        @routename('prelaunched.welcome')
-                        <!-- Subscription Form -->
-                        <form method="POST" action="{{ route('prelaunched.subscribed') }}" class="flex flex-col sm:flex-row gap-4 pb-3">
+                        <form method="POST" action="#" class="flex flex-col sm:flex-row gap-4 pb-3">
                             @csrf
                             @honeypot
                             <input name="email" placeholder="Enter email address" class="focus:outline-none bg-white border border-background-300 px-4 py-2 flex-1 rounded-lg" type="text">
                             <button href="#" class="focus:outline-none flex-shrink-0 flex font-semibold rounded-lg mx-auto sm:mx-0">
-                                <div class="tracking-wide flex-shrink-0 p-3 bg-secondary-600 rounded-l-lg text-white">
+                                <div class="tracking-wide flex-shrink-0 p-3 bg-orange rounded-l-lg text-white">
                                     <div>Send me updates!</div>
                                 </div>
-                                <div class="bg-secondary-800 p-3 rounded-r-lg">
+                                <div class="bg-orange-400 p-3 rounded-r-lg">
                                     <svg class="w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
                                 </div>
                             </button>
                         </form>
-                        @error('email')
-                        <p class="text-secondary-500 pb-3 font-bold">{{ $message }}</p>
-                        @enderror
                         <!-- /Subscription Form -->
                         <!-- Form disclaimers -->
                         <div class="flex gap-4 justify-center md:justify-start">
                             <div class="flex items-center gap-3">
-                                <svg class="h-6 w-6 text-secondary-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg class="h-6 w-6 text-blue-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
-                                <p class="text-secondary-200 text-xs">No SPAM</p>
+                                <p class="text-white text-xs">No SPAM</p>
                             </div>
                             <div class="flex items-center gap-3">
-                                <svg class="h-6 w-6 text-secondary-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg class="h-6 w-6 text-blue-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
-                                <p class="text-secondary-200 text-xs">Special discount if you register for updates</p>
+                                <p class="text-white text-xs">Special discount if you register for updates</p>
                             </div>
                         </div>
                         <!-- /Form disclaimers -->
-                        @endroutename
-                       @routename('prelaunched.subscribed')
-                        <p class="text-xl text-secondary-500 pb-3 font-bold">Thank you for your interest on my course! I'll be in touch!</p>
-                        @endroutename
                     </div>
                     <!-- /Left hero container -->
                     <!-- Right hero container -->
@@ -102,7 +93,7 @@
             <!-- /Responsive outer container -->
             <!-- /Hero -->
             <!-- Testimonial section -->
-            <section class="px-12 xl:px-32 py-12 bg-primary-300 text-gray-600">
+            <section class="px-12 xl:px-32 py-12 bg-gray-150 text-gray-600">
                 <div class="flex gap-8 flex-wrap sm:flex-nowrap">
                     <img src="/vendor/mastering-nova/images/me.jpg" class="rounded-full w-40 h-40" />
                     <div class="sm:border-l-4 border-primary-200 sm:pl-8">
@@ -114,7 +105,7 @@
             </section>
             <!-- /Testimonial section -->
             <!-- CTA section -->
-            <section class="flex items-center justify-center p-3 text-white bg-secondary-600">
+            <section class="flex items-center justify-center p-3 text-white bg-orange">
                 <p class="ml-3 text-sm text-center font-bold">
                     This course will cover both the current Orion (3.x) version and the new Nova version planned to be released this year
                 </p>
@@ -186,9 +177,9 @@
             </section>
             <!-- /Features section -->
             <!-- Videos section -->
-            <section class="px-12 xl:px-32 py-12 bg-background-800 text-gray-600">
+            <section class="px-12 xl:px-32 py-12 bg-blue-800 text-gray-600">
                 <p class="text-center text-2xl sm:text-3xl md:text-4xl text-gray-100 font-bold">Video Tutorials</p>
-                <p class="text-center text-xl lg:text-xl text-gray-300 pt-2">Subject to change along the recordings progress</p>
+                <p class="text-center text-xl lg:text-xl text-blue-200 pt-2">Subject to change along the recordings progress</p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 pt-12">
                     <!-- Video tutorial -->
                     <div class="p-3 bg-gray-900 rounded-lg flex flex-col justify-between">
@@ -200,7 +191,7 @@
                                 <p class="text-gray-100 text-xl">Installing Nova as a local repository and deactivating Vue Production mode</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -213,7 +204,7 @@
                                 <p class="text-gray-100 text-xl">What Nova mixins are available and their purpose</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -226,7 +217,7 @@
                                 <p class="text-gray-100 text-xl">The Nova UI booting process - JS architecture and file structure</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -239,7 +230,7 @@
                                 <p class="text-gray-100 text-xl">The FormField and HandlesValidation Mixins - Why are they important</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -252,7 +243,7 @@
                                 <p class="text-gray-100 text-xl">Field events that you need to know, how to they work together with other Fields</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -265,7 +256,7 @@
                                 <p class="text-gray-100 text-xl">The Field Vue Component structure and Props deep dive</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -278,7 +269,7 @@
                                 <p class="text-gray-100 text-xl">Extending the Field Vue Component without breaking changes</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -291,7 +282,7 @@
                                 <p class="text-gray-100 text-xl">Making Async calls and updating your own Field data</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -304,7 +295,7 @@
                                 <p class="text-gray-100 text-xl">Emiting client events to other Fields</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -317,7 +308,7 @@
                                 <p class="text-gray-100 text-xl">Changing the Field behavior in Index and Detail views</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -330,7 +321,7 @@
                                 <p class="text-gray-100 text-xl">Adding Vue Components to other screen locations dynamically</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -343,7 +334,7 @@
                                 <p class="text-gray-100 text-xl">Creating an inline Form Structure</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -356,7 +347,7 @@
                                 <p class="text-gray-100 text-xl">Create a link button and use Vue route links</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -369,7 +360,7 @@
                                 <p class="text-gray-100 text-xl">Using the Portal component to create a custom Modal</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -382,7 +373,7 @@
                                 <p class="text-gray-100 text-xl">Dynamic Vue Components using the same UI Component</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -395,7 +386,7 @@
                                 <p class="text-gray-100 text-xl">Transforming an NPM package into a Nova UI Component ready to be used</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -408,7 +399,7 @@
                                 <p class="text-gray-100 text-xl">Creating a Tool that will render a Blade View so you are 100% free of Vue</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -421,7 +412,7 @@
                                 <p class="text-gray-100 text-xl">Creating custom Filters</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -434,7 +425,7 @@
                                 <p class="text-gray-100 text-xl">Installing the remaining Tailwind CSS utility classes</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -447,7 +438,7 @@
                                 <p class="text-gray-100 text-xl">Changing the Nova Theme beyond the standards</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                     <!-- Video tutorial -->
@@ -460,14 +451,14 @@
                                 <p class="text-gray-100 text-xl">Adding Server side properties to be used in the UI Components</p>
                             </div>
                         </div>
-                        <p class="text-right align-bottom">Being recorded</p>
+                        <p class="text-right align-bottom text-orange">Being recorded</p>
                     </div>
                     <!-- /Video tutorial -->
                 </div>
             </section>
             <!-- /Videos section -->
             <!-- FAQ section -->
-            <section class="px-12 xl:px-32 py-12 bg-secondary-500">
+            <section class="px-12 xl:px-32 py-12 bg-gray-100">
                 <p class="text-center text-2xl sm:text-3xl md:text-4xl text-white font-bold">Questions ?</p>
                 <p class="text-center text-xl lg:text-xl text-gray-100 pt-2">Details on my course below</p>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 pt-12">
@@ -510,7 +501,7 @@
             </section>
             <!-- /FAQ section -->
             <!-- Footer -->
-            <section class="px-12 xl:px-32 py-12 bg-background-900 text-gray-600">
+            <section class="px-12 xl:px-32 py-12 bg-mnbackground-700 text-gray-600">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                     <!-- Logo image -->
                     <img class="h-8" src="/vendor/mastering-nova/images/logo.png" alt="{{ course()->name }}">
