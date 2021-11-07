@@ -11,7 +11,7 @@ module.exports =
     ],
     "theme": {
         heroPatterns: {
-          topography: heropatterns.circuitboard,
+          background: heropatterns.topography,
         },
         "colors": {
             "black": '#000000',
@@ -38,8 +38,8 @@ module.exports =
                 '150': '#fafafa',
                 DEFAULT: '#56677B',
                 '500': '#56677B',
-                '600': '#4C5c69',
-                '700': '#26425F'
+                '600': '#4b2917',
+                '700': '#1a1a1a'
             }
         },
         "extend": {

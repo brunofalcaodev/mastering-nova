@@ -2,9 +2,9 @@
 
 namespace MasteringNova\Features\Purchased\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use MasteringNova\Http\Controllers\Controller;
 
 class PurchasedController extends Controller
 {

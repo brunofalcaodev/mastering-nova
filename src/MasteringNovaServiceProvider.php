@@ -5,6 +5,7 @@ namespace MasteringNova;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use MasteringNova\Commands\Install;
+use MasteringNova\Commands\Update;
 
 class MasteringNovaServiceProvider extends ServiceProvider
 {
@@ -30,6 +31,7 @@ class MasteringNovaServiceProvider extends ServiceProvider
     {
         $this->commands([
             Install::class,
+            Update::class,
         ]);
     }
 

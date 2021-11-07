@@ -2,13 +2,13 @@
 
 namespace MasteringNova\Features\Videos\Controllers;
 
-use App\Http\Controllers\Controller;
 use Eduka\Models\Chapter;
 use Eduka\Models\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
+use MasteringNova\Http\Controllers\Controller;
 
 class VideosController extends Controller
 {

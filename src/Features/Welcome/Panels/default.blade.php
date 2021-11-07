@@ -9,7 +9,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <!-- /Favicon -->
     </x-eduka::head>
-    <x-eduka::body class="font-primary bg-repeat heropattern-topography-gray-150 antialised bg-gray-100">
+    <x-eduka::body class="font-primary bg-repeat heropattern-background-gray-600 antialised bg-gray-700">
         <x-eduka::responsive-breakpoints></x-eduka::responsive-breakpoints>
             <div class="px-4 sm:px-8 md:px-12 xl:container mx-auto">
                 <div class="shadow-lg">
@@ -65,6 +65,9 @@
                                     </button>
                                 </form>
                                 <!-- /Subscription Form -->
+                                @error('email')
+                                <p class="text-orange-500 pb-3 font-bold">{{ $message }}</p>
+                                @enderror
                                 <!-- Form disclaimers -->
                                 <div class="flex gap-4 justify-center md:justify-start">
                                     <div class="flex items-center gap-3">

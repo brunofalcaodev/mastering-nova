@@ -14,9 +14,9 @@ class InitialCourseSeeder extends Seeder
         Artisan::call('migrate:fresh');
 
         // Create the course.
-        Course::create([
+        $course = Course::create([
             'name' => 'Mastering Nova',
-            'canonical' => 'mastering-nova'
+            'canonical' => 'mastering-nova',
         ]);
     }
 }

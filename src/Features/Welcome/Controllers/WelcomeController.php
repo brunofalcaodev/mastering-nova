@@ -3,6 +3,7 @@
 namespace MasteringNova\Features\Welcome\Controllers;
 
 use App\Http\Controllers\Controller;
+use Eduka\Mail\DefaultMail;
 use Eduka\Models\Chapter;
 use Eduka\Models\Course;
 use Eduka\Models\Subscriber;
@@ -10,7 +11,6 @@ use Eduka\Models\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
-use MasteringNova\Mail\ThankYouForSubscribing;
 use ProtoneMedia\LaravelPaddle\Paddle;
 
 class WelcomeController extends Controller
@@ -55,18 +55,35 @@ class WelcomeController extends Controller
     public function subscribe(Request $request)
     {
         // Testing reasons with my email.
-        Subscriber::where('email', 'bruno.falcao@live.com')->delete();
+        Subscriber::where('email', 'bruno.falcao@live.com')->forceDelete();
 
         Validator::make($request->all(), [
-            'email' => 'required|email:rfc,dns|unique:App\Subscriber,email',
+            'email' => 'required|email:rfc,dns|unique:subscribers,email',
         ])->validate();
 
         Subscriber::create(['email' => $request->input('email')]);
 
+        // Mail data construction.
+        $data = [
+            'markdown' => "# Thanks for subscribing!
+Hey there!<br/>
+Thanks a lot for subscribing to my course!<br/>
+I'll keep you posted about my progress and the launch date as soon as possible.
+You'll also give you a special discount coupon that you can use to
+buy my course at a special early-access price!
+",
+        'button' => [
+        'text' => 'Click here to redeem',
+        'url' => 'https://www.publico.pt'
+            ]
+        ];
+
         Mail::to($request->input('email'))
-            ->send(new ThankYouForSubscribing());
+            ->send(new DefaultMail('Thank you for subscribing!', $data));
 
         return flame([
+            'videos' => Video::query(),
+            'totalVideos' => Video::all()->count(),
             'website' => Course::first(),
             'chapters' => Chapter::orderBy('index')->get(),
         ]);
