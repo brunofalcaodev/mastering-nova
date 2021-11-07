@@ -30,11 +30,27 @@ class Install extends Command
 
         $this->paragraph('-= Mastering Nova installation starting =-', false);
 
+        $this->replaceJsonDataTypesToLongText();
+
         $this->publishResources();
 
         $this->migrate();
 
         return Command::SUCCESS;
+    }
+
+    protected function replaceJsonDataTypesToLongText()
+    {
+        $this->paragraph('=> Replacing json migration datatypes by longTexts (for maria db compatibility)...', false);
+
+        // Delete previous create_media_file migrations.
+        foreach (glob(database_path('migrations/*.php')) as $filename) {
+            $file = file_get_contents($filename);
+
+            $data = str_replace('->json(', '->longText(', $file);
+
+            file_put_contents($filename, $data);
+        }
     }
 
     protected function publishResources()
