@@ -1,4 +1,4 @@
 {
-    "/overrides/public/vendor/mastering-nova/js/app.js": "/overrides/public/vendor/mastering-nova/js/app.js",
-    "/overrides/public/vendor/mastering-nova/css/app.css": "/overrides/public/vendor/mastering-nova/css/app.css"
+    "/public/vendor/mastering-nova/js/app.js": "/public/vendor/mastering-nova/js/app.js",
+    "/public/vendor/mastering-nova/css/app.css": "/public/vendor/mastering-nova/css/app.css"
 }

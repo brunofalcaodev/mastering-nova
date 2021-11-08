@@ -32,7 +32,7 @@
                                 <p class="text-2xl md:text-xl lg:text-2xl text-center sm:text-left font-bold text-blue-200 leading-snug">The Laravel official course that will empower you to create killer, beautiful, and fully-functional UI components in Laravel Nova</p>
                                 <!-- /Title and subtitle -->
                                 <!-- Features -->
-                                <div class="py-12">
+                                <div class="pt-12">
                                     <ul class="flex flex-col gap-6 text-white text-xl">
                                         <li class="w-full sm:flex gap-6 items-start">
                                             <svg class="mx-auto sm:mx-0 flex-shrink-0 h-16 w-16 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +49,8 @@
                                     </ul>
                                 </div>
                                 <!-- /Features -->
-                                <form method="POST" action="#" class="flex flex-col sm:flex-row gap-4 pb-3">
+                                @routename('welcome')
+                                <form method="POST" action="#" class="flex flex-col sm:flex-row gap-4 pb-3 pt-12">
                                     @csrf
                                     @honeypot
                                     <input name="email" placeholder="Enter email address" class="focus:outline-none bg-white border border-background-300 px-4 py-2 flex-1 rounded-lg" type="text">
@@ -84,6 +85,16 @@
                                     </div>
                                 </div>
                                 <!-- /Form disclaimers -->
+                                @endroutename
+                                @routename('welcome.subscribed')
+                                <div class="pt-12">
+                                    <ul class="flex flex-col gap-6 text-white text-xl">
+                                        <li class="w-full sm:flex gap-6 items-start">
+                                            <p class="text-orange text-xl md:text-base lg:text-xl font-bold pt-3 sm:pt-0 text-center sm:text-left">Thanks! I will keep you posted!</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                @endroutename
                             </div>
                             <!-- /Left hero container -->
                             <!-- Right hero container -->

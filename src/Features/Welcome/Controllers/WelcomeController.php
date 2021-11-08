@@ -72,10 +72,10 @@ I'll keep you posted about my progress and the launch date as soon as possible.
 You'll also give you a special discount coupon that you can use to
 buy my course at a special early-access price!
 ",
-        'button' => [
-        'text' => 'Click here to redeem',
-        'url' => 'https://www.publico.pt'
-            ]
+            'button' => [
+                'text' => 'Click here to redeem',
+                'url' => 'https://www.publico.pt',
+            ],
         ];
 
         Mail::to($request->input('email'))
